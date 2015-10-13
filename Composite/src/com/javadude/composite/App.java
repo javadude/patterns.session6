@@ -27,6 +27,7 @@ public class App {
 					)
 				);
 		
+		
 		System.out.println(ceo.writeReport(""));
 	}
 }
