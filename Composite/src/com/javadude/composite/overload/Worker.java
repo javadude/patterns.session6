@@ -10,4 +10,7 @@ public class Worker extends Employee {
 	public void useProcessor(EmployeeProcessor processor) {
 		processor.process(this);
 	}
+	public void testOverload() {
+		OverloadTest.foo(this);
+	}
 }

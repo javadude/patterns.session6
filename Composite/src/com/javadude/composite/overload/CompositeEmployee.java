@@ -33,4 +33,7 @@ public abstract class CompositeEmployee extends Employee {
 //			minion.useProcessor(processor);
 //		}
 	}
+	public void testOverload() {
+		OverloadTest.foo(this);
+	}
 }
