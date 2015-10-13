@@ -27,7 +27,8 @@ public class App {
 					)
 				);
 
-		EmployeeVisitor visitor = new ConcreteVisitor();
+		ReportVisitor visitor = new ReportVisitor();
 		ceo.accept(visitor);
+		System.out.println(visitor.getReport());
 	}
 }
