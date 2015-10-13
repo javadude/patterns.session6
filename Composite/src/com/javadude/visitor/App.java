@@ -26,9 +26,8 @@ public class App {
 						.add(new Worker("Annette"))
 					)
 				);
-		
-		ReportProcessor reportProcessor = new ReportProcessor();
-		ceo.useProcessor(reportProcessor);
-		System.out.println(reportProcessor.getReport());
+
+		EmployeeVisitor visitor = new ConcreteVisitor();
+		ceo.accept(visitor);
 	}
 }

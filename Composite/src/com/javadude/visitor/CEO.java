@@ -6,5 +6,6 @@ public class CEO extends CompositeEmployee {
 	}
 	public void accept(EmployeeVisitor visitor) {
 		visitor.visit(this);
+		acceptChildren(visitor);
 	}
 }

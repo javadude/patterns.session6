@@ -6,10 +6,6 @@ public class Worker extends Employee {
 		super(name);
 	}
 
-	@Override
-	public void useProcessor(EmployeeProcessor processor) {
-		processor.process(this);
-	}
 	public void accept(EmployeeVisitor visitor) {
 		visitor.visit(this);
 	}

@@ -13,7 +13,6 @@ public abstract class Employee {
 		this.name = name;
 	}
 	
-	public abstract void useProcessor(EmployeeProcessor processor);
 	public void accept(EmployeeVisitor visitor) {
 		visitor.visit(this);
 	}

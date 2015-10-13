@@ -21,19 +21,12 @@ public abstract class CompositeEmployee extends Employee {
 		minions.add(minion);
 		return this;
 	}
-	@Override
-	public void useProcessor(EmployeeProcessor processor) {
-		processor.process(this);
+	protected void acceptChildren(EmployeeVisitor visitor) {
 		minions.stream()
-			.forEach(minion -> minion.useProcessor(processor));
-
-// NON-STREAM EQUIVALENT:
-//		processor.process(this);
-//		for (Employee minion : minions) {
-//			minion.useProcessor(processor);
-//		}
+			.forEach(minion -> minion.accept(visitor));
 	}
 	public void accept(EmployeeVisitor visitor) {
 		visitor.visit(this);
+		acceptChildren(visitor);
 	}
 }
