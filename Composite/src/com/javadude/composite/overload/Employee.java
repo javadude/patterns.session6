@@ -14,7 +14,7 @@ public abstract class Employee {
 	}
 	
 	public abstract void useProcessor(EmployeeProcessor processor);
-	public void testOverload() {
-		OverloadTest.foo(this);
+	public void testOverload(Tester tester) {
+		tester.foo(this);
 	}
 }

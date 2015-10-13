@@ -5,7 +5,7 @@ public class Manager extends CompositeEmployee {
 	public Manager(String name) {
 		super(name);
 	}
-	public void testOverload() {
-		OverloadTest.foo(this);
+	public void testOverload(Tester tester) {
+		tester.foo(this);
 	}
 }

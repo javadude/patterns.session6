@@ -4,7 +4,7 @@ public class VP extends CompositeEmployee {
 	public VP(String name) {
 		super(name);
 	}
-	public void testOverload() {
-		OverloadTest.foo(this);
+	public void testOverload(Tester tester) {
+		tester.foo(this);
 	}
 }
